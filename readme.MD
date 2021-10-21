@@ -1,5 +1,9 @@
-Setup your environment
-[1]
+## Studee populator script
+
+This script is designed to take in a textfile written in a certain format, clean it by separating it out into different course units, and then add it to a Firebase database.
+
+## Setup your environment
+
 - "python3 -m venv myenv"
 
 Activate virtualenv by using:
