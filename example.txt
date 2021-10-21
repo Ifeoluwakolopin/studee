@@ -1,0 +1,13 @@
+CODE 101: FIRST COURSE TITLE 2 Units
+course content, lorem ipsum.
+
+CODE 102: SECOND COURSE TITLE 2 Units
+this course has an empty line above it to show that it is separate from the first course
+
+CODE 103: THIRD COURSE TITLE 1 Units
+This course has its content on multiple lines.
+It will still be read succesfully
+
+CODE 104 FOURTH COURSE TITLE 3 Units
+Avoid using numbers and symbols like & in the course title.
+It will result in errors.
