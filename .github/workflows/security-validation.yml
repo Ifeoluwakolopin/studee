@@ -47,7 +47,7 @@ jobs:
 
           client = firestore.Client(project="offline-security-smoke", credentials=AnonymousCredentials())
           collection = client.collection("course_outline").document("unilag").collection("engineering")
-          assert collection.path == "course_outline/unilag/engineering"
+          assert collection.document("offline").path == "course_outline/unilag/engineering/offline"
           document = Document(name="projects/offline/databases/(default)/documents/demo/one")
           assert Document.deserialize(Document.serialize(document)).name == document.name
           client.close()
