@@ -24,6 +24,8 @@ jobs:
       - name: Verify and install genuine lock
         run: |
           python -m pip install --upgrade pip==26.2.2 setuptools==84.2.1 pipenv==2026.10.2
+          python -m pip list --format=json > lock-tool-resolved.json
+          python -c "import pipenv; from pathlib import Path; p = Path(pipenv.__file__).parent; print((p / 'vendor/vendor.txt').read_text()); print((p / 'patched/pip/_vendor/vendor.txt').read_text())" > pipenv-vendors.txt
           pipenv verify
           pipenv requirements > requirements.generated.txt
           diff -u requirements.txt requirements.generated.txt
@@ -62,4 +64,6 @@ jobs:
             resolved.json
             installer-vendors.txt
             setuptools-vendors.json
+            lock-tool-resolved.json
+            pipenv-vendors.txt
           retention-days: 7

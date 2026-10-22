@@ -20,6 +20,12 @@ and `python read.py example.txt`. Do not run `populator.py` against a real
 configuration during validation. Hosted validation constructs only a Firestore
 document reference with anonymous credentials; it performs no database calls.
 
+Installer limitation (2026-10-22): current pip 26.2.2 and Pipenv 2026.10.2's
+patched pip still bundle urllib3 2.7.0, with advisories fixed in 2.8.0.
+The application's urllib3 pin does not patch these private installer copies.
+Hosted artifacts inventory application and installer dependencies separately;
+a patched installer release is still needed. No all-tooling-clean claim is made.
+
 - "python3 -m venv myenv"
 
 Activate virtualenv by using:
